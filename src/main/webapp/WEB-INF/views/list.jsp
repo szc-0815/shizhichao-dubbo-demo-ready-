@@ -8,15 +8,9 @@
 
 </head>
 <body>
-<form action="list">
+<form action="list" method="post">
 <select name="condition">
                     <option value="">请选择</option>
-                    <c:if test="${condition=='created' }">
-                    <option value="created" selected>发表时间</option>
-                    </c:if>
-                    <c:if test="${condition!='created' }">
-                    <option value="created">发表时间</option>
-                    </c:if>
                      <c:if test="${condition=='user_id' }">
                     <option value="user_id" selected>作者</option>
                     </c:if>
@@ -29,7 +23,11 @@
                     <c:if test="${condition!='commentCnt' }">
                     <option value="commentCnt">评论数量</option>
                     </c:if>
-             </select><input type="submit" value="查询">
+             </select>
+             开始时间：<input type="date" name="start" value="${start}">
+             结束时间: <input type="date" name="end" value="${end}">
+             
+             <input type="submit" value="查询">
              <table>
                 <tr>
                    <td>id</td>
@@ -43,7 +41,7 @@
                   <tr>
                    <td>${a.id }</td>
                    <td>${a.title }</td>
-                   <td>${a.created }</td>
+                   <td>${a.created}</td>
                    <td>${a. username}</td>
                    <td>${a.commentcnt }</td>
                    <td>${a.status==1?'审核通过':审核未通过 }</td>

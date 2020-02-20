@@ -8,6 +8,6 @@ import com.shizhichao.entity.Article;
 
 public interface ArticleDao {
 
-	List<Article> list(@Param("condition")String condition);
+	List<Article> list(@Param("condition")String condition, @Param("start")String start,@Param("end") String end);
 
 }

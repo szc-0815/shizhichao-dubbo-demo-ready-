@@ -6,6 +6,6 @@ import com.shizhichao.entity.Article;
 
 public interface ArticleService {
 
-	List<Article> list(String condition);
+	List<Article> list(String condition, String start, String end);
 
 }

@@ -15,10 +15,11 @@ public class ArticleServiceImpl implements ArticleService {
 	private ArticleDao articleDao;
 
 	@Override
-	public List<Article> list(String condition) {
+	public List<Article> list(String condition, String start, String end) {
 		// TODO Auto-generated method stub
-		return articleDao.list(condition);
+		return articleDao.list(condition,start,end);
 	}
+
 	
 	
 	

@@ -18,12 +18,15 @@ public class ArticleController {
 	private ArticleService articleService;
 	
 	@RequestMapping("list")
-	public String list(Model model,String condition) {
+	public String list(Model model,String condition,String start,String end) {
 		System.out.println("-------------------------------------");
-		List<Article> articleList = articleService.list(condition);
+		List<Article> articleList = articleService.list(condition,start,end);
 		
 		model.addAttribute("condition", condition);
 		model.addAttribute("articleList", articleList);
+		model.addAttribute("start", start);
+		model.addAttribute("end", end);
+		
 		return "list";
 	}
 	

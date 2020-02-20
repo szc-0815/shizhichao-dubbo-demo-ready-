@@ -36,9 +36,9 @@ public class Article implements Serializable{
 
     private Integer deleted;
 
-    private Date created;
+    private String created;
 
-    private Date updated;
+    private String updated;
 
     private int commentcnt;
 
@@ -49,65 +49,48 @@ public class Article implements Serializable{
     private String nickname;
     
     private String zhaiYao;
-    
-    
-    public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getZhaiYao() {
-		return zhaiYao;
-	}
-
-	public void setZhaiYao(String zhaiYao) {
-		this.zhaiYao = zhaiYao;
-	}
-
-	public String getNickname() {
-		return nickname;
-	}
-
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
-	}
-
-	public String getStatusIds() {
-		return statusIds;
-	}
-
-	public void setStatusIds(String statusIds) {
-		this.statusIds = statusIds;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	@Override
-	public String toString() {
-		return "Article [id=" + id + ", title=" + title + ", picture=" + picture + ", channelId=" + channelId
-				+ ", categoryId=" + categoryId + ", userId=" + userId + ", hits=" + hits + ", hot=" + hot + ", status="
-				+ status + ", deleted=" + deleted + ", created=" + created + ", updated=" + updated + ", commentcnt="
-				+ commentcnt + ", content=" + content + "]";
-	}
 
 	public Integer getId() {
-        return id;
-    }
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public String getChannelName() {
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getPicture() {
+		return picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+
+	public Integer getChannelId() {
+		return channelId;
+	}
+
+	public void setChannelId(Integer channelId) {
+		this.channelId = channelId;
+	}
+
+	public Integer getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public String getChannelName() {
 		return channelName;
 	}
 
@@ -123,93 +106,71 @@ public class Article implements Serializable{
 		this.categoryName = categoryName;
 	}
 
-	public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
+	public Integer getUserId() {
+		return userId;
+	}
 
-    public String getPicture() {
-        return picture;
-    }
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
-    public void setPicture(String picture) {
-        this.picture = picture == null ? null : picture.trim();
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public Integer getChannelId() {
-        return channelId;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public void setChannelId(Integer channelId) {
-        this.channelId = channelId;
-    }
+	public Integer getHits() {
+		return hits;
+	}
 
-    public Integer getCategoryId() {
-        return categoryId;
-    }
+	public void setHits(Integer hits) {
+		this.hits = hits;
+	}
 
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-    }
+	public Integer getHot() {
+		return hot;
+	}
 
-    public Integer getUserId() {
-        return userId;
-    }
+	public void setHot(Integer hot) {
+		this.hot = hot;
+	}
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+	public Integer getStatus() {
+		return status;
+	}
 
-    public Integer getHits() {
-        return hits;
-    }
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
 
-    public void setHits(Integer hits) {
-        this.hits = hits;
-    }
+	public Integer getDeleted() {
+		return deleted;
+	}
 
-    public Integer getHot() {
-        return hot;
-    }
+	public void setDeleted(Integer deleted) {
+		this.deleted = deleted;
+	}
 
-    public void setHot(Integer hot) {
-        this.hot = hot;
-    }
+	public String getCreated() {
+		return created;
+	}
 
-    public Integer getStatus() {
-        return status;
-    }
+	public void setCreated(String created) {
+		this.created = created;
+	}
 
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
+	public String getUpdated() {
+		return updated;
+	}
 
-    public Integer getDeleted() {
-        return deleted;
-    }
+	public void setUpdated(String updated) {
+		this.updated = updated;
+	}
 
-    public void setDeleted(Integer deleted) {
-        this.deleted = deleted;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    public Date getUpdated() {
-        return updated;
-    }
-
-    public void setUpdated(Date updated) {
-        this.updated = updated;
-    }
-
-    
-
-    public int getCommentcnt() {
+	public int getCommentcnt() {
 		return commentcnt;
 	}
 
@@ -218,10 +179,83 @@ public class Article implements Serializable{
 	}
 
 	public String getContent() {
-        return content;
-    }
+		return content;
+	}
 
-    public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
-    }
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getStatusIds() {
+		return statusIds;
+	}
+
+	public void setStatusIds(String statusIds) {
+		this.statusIds = statusIds;
+	}
+
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+	public String getZhaiYao() {
+		return zhaiYao;
+	}
+
+	public void setZhaiYao(String zhaiYao) {
+		this.zhaiYao = zhaiYao;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Article(Integer id, String title, String picture, Integer channelId, Integer categoryId, String channelName,
+			String categoryName, Integer userId, String username, Integer hits, Integer hot, Integer status,
+			Integer deleted, String created, String updated, int commentcnt, String content, String statusIds,
+			String nickname, String zhaiYao) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.picture = picture;
+		this.channelId = channelId;
+		this.categoryId = categoryId;
+		this.channelName = channelName;
+		this.categoryName = categoryName;
+		this.userId = userId;
+		this.username = username;
+		this.hits = hits;
+		this.hot = hot;
+		this.status = status;
+		this.deleted = deleted;
+		this.created = created;
+		this.updated = updated;
+		this.commentcnt = commentcnt;
+		this.content = content;
+		this.statusIds = statusIds;
+		this.nickname = nickname;
+		this.zhaiYao = zhaiYao;
+	}
+
+	public Article() {
+		super();
+	}
+
+	@Override
+	public String toString() {
+		return "Article [id=" + id + ", title=" + title + ", picture=" + picture + ", channelId=" + channelId
+				+ ", categoryId=" + categoryId + ", channelName=" + channelName + ", categoryName=" + categoryName
+				+ ", userId=" + userId + ", username=" + username + ", hits=" + hits + ", hot=" + hot + ", status="
+				+ status + ", deleted=" + deleted + ", created=" + created + ", updated=" + updated + ", commentcnt="
+				+ commentcnt + ", content=" + content + ", statusIds=" + statusIds + ", nickname=" + nickname
+				+ ", zhaiYao=" + zhaiYao + "]";
+	}
+    
+    
+    
+    
 }
