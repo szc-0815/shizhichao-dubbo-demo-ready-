@@ -3,7 +3,7 @@
 <mapper namespace="com.shizhichao.dao.ArticleDao">
    <!-- 查询文章列表 deleted状态为0的 -->
   <select id="list" resultType="Article">
-		select a.id,a.title,a.created,u.username nickname,a.commentCnt,a.status 
+		select a.id,a.title,a.created,u.username ,u.nickname,a.commentCnt,a.status 
 		from cms_article a LEFT JOIN cms_user u on a.user_id =u.id
 	 		<where>
 	 			<if test="start!=null and start!=''">
